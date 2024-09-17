@@ -1,6 +1,6 @@
 @Desafio.Decompor.Server_HostAddress = http://localhost:5269
 
-GET {{Desafio.Decompor.Server_HostAddress}}/weatherforecast/
+GET {{Desafio.Decompor.Server_HostAddress}}/decompor/
 Accept: application/json
 
 ###
