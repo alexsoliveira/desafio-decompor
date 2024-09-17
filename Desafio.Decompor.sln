@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Decompor.Api", "bac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Decompor.Business", "back-end\src\Desafio.Decompor.Business\Desafio.Decompor.Business.csproj", "{26A93115-A18C-42E9-9E40-F15F67D31ECC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Decompor.UnitTests", "Desafio.Decompor.UnitTests\Desafio.Decompor.UnitTests.csproj", "{19302961-ECC8-4367-A673-9F4EF44294CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Decompor.UnitTests", "back-end\tests\Desafio.Decompor.UnitTests\Desafio.Decompor.UnitTests.csproj", "{3905D15B-8BEB-454E-A8A8-64B04E08A03D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,10 @@ Global
 		{26A93115-A18C-42E9-9E40-F15F67D31ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26A93115-A18C-42E9-9E40-F15F67D31ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26A93115-A18C-42E9-9E40-F15F67D31ECC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{19302961-ECC8-4367-A673-9F4EF44294CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19302961-ECC8-4367-A673-9F4EF44294CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19302961-ECC8-4367-A673-9F4EF44294CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19302961-ECC8-4367-A673-9F4EF44294CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3905D15B-8BEB-454E-A8A8-64B04E08A03D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3905D15B-8BEB-454E-A8A8-64B04E08A03D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3905D15B-8BEB-454E-A8A8-64B04E08A03D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3905D15B-8BEB-454E-A8A8-64B04E08A03D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,7 +53,7 @@ Global
 		{4EA0E785-E168-4979-A558-B53C649018C5} = {8C04D706-97F2-4C44-910E-B787B6038ED3}
 		{4A81DD84-053C-4B99-A9B6-0121EB35F8B9} = {49B490A3-C0D7-4DF9-AF3C-6F0197311F72}
 		{26A93115-A18C-42E9-9E40-F15F67D31ECC} = {49B490A3-C0D7-4DF9-AF3C-6F0197311F72}
-		{19302961-ECC8-4367-A673-9F4EF44294CD} = {4EA0E785-E168-4979-A558-B53C649018C5}
+		{3905D15B-8BEB-454E-A8A8-64B04E08A03D} = {4EA0E785-E168-4979-A558-B53C649018C5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {06ED0C59-0615-4CFF-A25C-4F7C770E3025}
