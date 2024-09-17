@@ -18,15 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\back-end\src\Desafio.Decompor.Business\Desafio.Decompor.Business.csproj" />
+    <ProjectReference Include="..\..\src\Desafio.Decompor.Business\Desafio.Decompor.Business.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Using Include="Xunit" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Validations\" />
   </ItemGroup>
 
 </Project>
