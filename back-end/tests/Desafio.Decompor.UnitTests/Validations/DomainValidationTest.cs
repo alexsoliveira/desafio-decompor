@@ -35,6 +35,21 @@ namespace Desafio.Decompor.UnitTests.Validations
             action.Should()
                 .Throw<EntityValidationException>()
                 .WithMessage("O campo ValorDeEntrada, só aceita números entre (1 e 100).");
-        }        
+        }      
+
+        [Theory(DisplayName = nameof(ErrorQuandoFor_NotNuloOuZero))]
+        [Trait("Domain", "DomainValidation - Validation")]
+        [InlineData(0)]        
+        [InlineData(null)]
+        public void ErrorQuandoFor_NotNuloOuZero(int? valorDeEntrada)
+        {            
+            Action action =
+                () => DomainValidation.NotNullOuZero(valorDeEntrada,"ValorDeEntrada");
+
+            action
+                .Should()
+                .Throw<EntityValidationException>()
+                .WithMessage("O campo ValorDeEntrada, não pode ser zero ou nulo.");
+        }
     }
 }
