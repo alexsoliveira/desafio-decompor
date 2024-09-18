@@ -14,24 +14,24 @@ namespace Desafio.Decompor.IntegrationTests.Services
 
         [Fact(DisplayName = nameof(CalcularNumerosDivisores))]
         [Trait("Service", "Decompor - Service")]        
-        public async void CalcularNumerosDivisores()
+        public void CalcularNumerosDivisores()
         {
             var decompor = _fixture.ObterValorDecomporValido();
             IDecomporService decomporService = new DecomporService();           
 
-            var valorFinal = await decomporService.ObterListaNumerosDivisores(decompor.ValorDeEntrada);
+            var valorFinal = decomporService.ObterListaNumerosDivisores(decompor);
 
             valorFinal.Should().NotBeNull();            
         }
 
         [Fact(DisplayName = nameof(CalcularDivisoresPrimos))]
         [Trait("Service", "Decompor - Service")]        
-        public async void CalcularDivisoresPrimos()
+        public void CalcularDivisoresPrimos()
         {
             var decompor = _fixture.ObterValorDecomporValido();
             IDecomporService decomporService = new DecomporService();
 
-            var valorFinal = await decomporService.ObterListaDivisoresPrimos(decompor.ValorDeEntrada);
+            var valorFinal = decomporService.ObterListaDivisoresPrimos(decompor);
 
             valorFinal.Should().NotBeNull();
         } 

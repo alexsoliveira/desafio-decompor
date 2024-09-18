@@ -18,10 +18,10 @@ namespace Desafio.Decompor.UnitTests.Domain
         {
             var decomporValido = _fixture.ObterValorDecomporValido();
 
-            var decompor = new DomainObject.Decompor(decomporValido.ValorDeEntrada);
+            var decompor = new DomainObject.Decompor(decomporValido.Entrada);
 
             decompor.Should().NotBeNull();
-            decompor.ValorDeEntrada.Should().Be(decomporValido.ValorDeEntrada);
+            decompor.Entrada.Should().Be(decomporValido.Entrada);
         }
 
         [Fact(DisplayName = nameof(Instancia_ValorParaDecompor_Positivo))]
@@ -33,7 +33,7 @@ namespace Desafio.Decompor.UnitTests.Domain
             var decompor = new DomainObject.Decompor(valorEntrada);
 
             decompor.Should().NotBeNull();
-            decompor.ValorDeEntrada.Should().Be(valorEntrada);
+            decompor.Entrada.Should().Be(valorEntrada);
         }
 
         [Fact(DisplayName = nameof(EhPositivo_DeveRetornarVerdadeiro_QuandoValorForPositivo))]
@@ -58,7 +58,7 @@ namespace Desafio.Decompor.UnitTests.Domain
 
             action.Should()
                 .Throw<EntityValidationException>()
-                .WithMessage("O campo ValorDeEntrada, só aceita números inteiros positivos.");
+                .WithMessage("O campo Entrada, só aceita números inteiros positivos.");
         }
 
         [Theory(DisplayName = nameof(ValidarError_QuandoValorDeEntrada_ForNegativoOuZero))]
@@ -72,7 +72,7 @@ namespace Desafio.Decompor.UnitTests.Domain
 
             action.Should()
                 .Throw<EntityValidationException>()
-                .WithMessage("O campo ValorDeEntrada, só aceita números entre (1 e 100).");
+                .WithMessage("O campo Entrada, só aceita números entre (1 e 100).");
         }
     }
 }
