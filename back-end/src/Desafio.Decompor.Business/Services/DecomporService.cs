@@ -1,21 +1,17 @@
-﻿using Desafio.Decompor.Business.Exceptions;
-using Desafio.Decompor.Business.Interfaces;
-using Desafio.Decompor.Business.Validations;
+﻿using Desafio.Decompor.Business.Interfaces;
+using DomainObject = Desafio.Decompor.Business.Domain;
 
 namespace Desafio.Decompor.Business.Services
 {
     public class DecomporService : IDecomporService
     {
-        public async Task<IEnumerable<int>> ObterListaDivisoresPrimos(int valorEntrada)
+        public IEnumerable<int> ObterListaNumerosDivisores(DomainObject.Decompor decompor)
         {
-            List<int> divisores = new List<int>();
+            List<int> divisores = new List<int>();            
 
-            ValidarValorEntrada(valorEntrada);
-
-
-            for (int i = 1; i <= valorEntrada; i++)
+            for (int i = 1; i <= decompor.Entrada; i++)
             {
-                if (valorEntrada % i == 0)
+                if (decompor.Entrada % i == 0)
                 {
                     divisores.Add(i);
                 }
@@ -24,28 +20,22 @@ namespace Desafio.Decompor.Business.Services
             return divisores;
         }
 
-        public async Task<IEnumerable<int>> ObterListaNumerosDivisores(int valorEntrada)
+        public IEnumerable<int> ObterListaDivisoresPrimos(DomainObject.Decompor decompor)
         {
             List<int> divisoresPrimos = new List<int>();
 
-            ValidarValorEntrada(valorEntrada);
+            divisoresPrimos.Add(1);
 
-            for (int i = 2; i <= valorEntrada; i++)
+            for (int i = 2; i <= decompor.Entrada; i++)
             {
-                if (valorEntrada % i == 0 && EhNumeroPrimo(i))
+                if (decompor.Entrada % i == 0 && EhNumeroPrimo(i))
                 {
                     divisoresPrimos.Add(i);
                 }
             }
 
             return divisoresPrimos;
-        }
-
-        private static void ValidarValorEntrada(int valorEntrada)
-        {
-            DomainValidation.ApenasNumerosInteirosPositivos(valorEntrada, nameof(valorEntrada));
-            DomainValidation.ApenasNumerosInteirosEntre_1e100(valorEntrada, nameof(valorEntrada));
-        }
+        }        
 
         private static bool EhNumeroPrimo(int numero)
         {

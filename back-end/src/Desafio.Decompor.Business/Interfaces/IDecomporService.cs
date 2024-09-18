@@ -1,8 +1,10 @@
-﻿namespace Desafio.Decompor.Business.Interfaces
+﻿using DomainObject = Desafio.Decompor.Business.Domain;
+
+namespace Desafio.Decompor.Business.Interfaces
 {
     public interface IDecomporService
     {
-        Task<IEnumerable<int>> ObterListaNumerosDivisores(int valorEntrada);
-        Task<IEnumerable<int>> ObterListaDivisoresPrimos(int valorEntrada);
+        IEnumerable<int> ObterListaNumerosDivisores(DomainObject.Decompor valorEntrada);
+        IEnumerable<int> ObterListaDivisoresPrimos(DomainObject.Decompor valorEntrada);        
     }
 }
