@@ -17,6 +17,7 @@ namespace Desafio.Decompor.Business.Domain
         {
             DomainValidation.ApenasNumerosInteirosPositivos(ValorDeEntrada, nameof(ValorDeEntrada));
             DomainValidation.ApenasNumerosInteirosEntre_1e100(ValorDeEntrada, nameof(ValorDeEntrada));
+            DomainValidation.NotNullOuZero(ValorDeEntrada, nameof(ValorDeEntrada));
         }
     }
 }
