@@ -47,12 +47,12 @@ namespace Desafio.Decompor.UnitTests.Domain
             resultado.Should().BeTrue();            
         }
 
-        [Theory(DisplayName = nameof(ValidarError_QuandoValorDeEntreda_ForNegativoOuZero))]
+        [Theory(DisplayName = nameof(ValidarError_QuandoValorDeEntrada_ForNegativoOuZero))]
         [Trait("Domain", "Decompor - Aggregates")]
         [InlineData(-1)]
         [InlineData(-100)]       
         [InlineData(0)]
-        public void ValidarError_QuandoValorDeEntreda_ForNegativoOuZero(int valorDeEntrada)
+        public void ValidarError_QuandoValorDeEntrada_ForNegativoOuZero(int valorDeEntrada)
         {
             Action action = () => new DomainObject.Decompor(valorDeEntrada);
 
@@ -61,12 +61,12 @@ namespace Desafio.Decompor.UnitTests.Domain
                 .WithMessage("O campo ValorDeEntrada, só aceita números inteiros positivos.");
         }
 
-        [Theory(DisplayName = nameof(ValidarError_QuandoValorDeEntreda_ForNegativoOuZero))]
+        [Theory(DisplayName = nameof(ValidarError_QuandoValorDeEntrada_ForNegativoOuZero))]
         [Trait("Domain", "Decompor - Aggregates")]
         [InlineData(101)]
         [InlineData(1000)]
         [InlineData(200)]
-        public void ValidarError_QuandoValorDeEntreda_ForMaiorQue100(int valorDeEntrada)
+        public void ValidarError_QuandoValorDeEntrada_ForMaiorQue100(int valorDeEntrada)
         {
             Action action = () => new DomainObject.Decompor(valorDeEntrada);
 
