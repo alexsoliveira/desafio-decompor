@@ -4,19 +4,20 @@ namespace Desafio.Decompor.Business.Domain
 {
     public class Decompor
     {
-        public int ValorDeEntrada { get; private set; }
+        public int Entrada { get; private set; }
 
-        public Decompor(int valorDeEntrada) 
+        public Decompor(int entrada) 
         {
-            ValorDeEntrada = valorDeEntrada;
+            Entrada = entrada;
 
             Validar();
-        }
+        }        
 
         private void Validar()
         {
-            DomainValidation.ApenasNumerosInteirosPositivos(ValorDeEntrada, nameof(ValorDeEntrada));
-            DomainValidation.ApenasNumerosInteirosEntre_1e100(ValorDeEntrada, nameof(ValorDeEntrada));
+            DomainValidation.ApenasNumerosInteirosPositivos(Entrada, nameof(Entrada));
+            DomainValidation.ApenasNumerosInteirosEntre_1e100(Entrada, nameof(Entrada));
+            DomainValidation.NotNullOuZero(Entrada, nameof(Entrada));
         }
     }
 }

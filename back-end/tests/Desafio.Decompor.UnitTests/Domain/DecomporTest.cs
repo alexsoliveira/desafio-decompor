@@ -18,10 +18,10 @@ namespace Desafio.Decompor.UnitTests.Domain
         {
             var decomporValido = _fixture.ObterValorDecomporValido();
 
-            var decompor = new DomainObject.Decompor(decomporValido.ValorDeEntrada);
+            var decompor = new DomainObject.Decompor(decomporValido.Entrada);
 
             decompor.Should().NotBeNull();
-            decompor.ValorDeEntrada.Should().Be(decomporValido.ValorDeEntrada);
+            decompor.Entrada.Should().Be(decomporValido.Entrada);
         }
 
         [Fact(DisplayName = nameof(Instancia_ValorParaDecompor_Positivo))]
@@ -33,7 +33,7 @@ namespace Desafio.Decompor.UnitTests.Domain
             var decompor = new DomainObject.Decompor(valorEntrada);
 
             decompor.Should().NotBeNull();
-            decompor.ValorDeEntrada.Should().Be(valorEntrada);
+            decompor.Entrada.Should().Be(valorEntrada);
         }
 
         [Fact(DisplayName = nameof(EhPositivo_DeveRetornarVerdadeiro_QuandoValorForPositivo))]
@@ -47,32 +47,32 @@ namespace Desafio.Decompor.UnitTests.Domain
             resultado.Should().BeTrue();            
         }
 
-        [Theory(DisplayName = nameof(ValidarError_QuandoValorDeEntreda_ForNegativoOuZero))]
+        [Theory(DisplayName = nameof(ValidarError_QuandoValorDeEntrada_ForNegativoOuZero))]
         [Trait("Domain", "Decompor - Aggregates")]
         [InlineData(-1)]
         [InlineData(-100)]       
         [InlineData(0)]
-        public void ValidarError_QuandoValorDeEntreda_ForNegativoOuZero(int valorDeEntrada)
+        public void ValidarError_QuandoValorDeEntrada_ForNegativoOuZero(int valorDeEntrada)
         {
             Action action = () => new DomainObject.Decompor(valorDeEntrada);
 
             action.Should()
                 .Throw<EntityValidationException>()
-                .WithMessage("O campo ValorDeEntrada, só aceita números inteiros positivos.");
+                .WithMessage("O campo Entrada, só aceita números inteiros positivos.");
         }
 
-        [Theory(DisplayName = nameof(ValidarError_QuandoValorDeEntreda_ForNegativoOuZero))]
+        [Theory(DisplayName = nameof(ValidarError_QuandoValorDeEntrada_ForNegativoOuZero))]
         [Trait("Domain", "Decompor - Aggregates")]
         [InlineData(101)]
         [InlineData(1000)]
         [InlineData(200)]
-        public void ValidarError_QuandoValorDeEntreda_ForMaiorQue100(int valorDeEntrada)
+        public void ValidarError_QuandoValorDeEntrada_ForMaiorQue100(int valorDeEntrada)
         {
             Action action = () => new DomainObject.Decompor(valorDeEntrada);
 
             action.Should()
                 .Throw<EntityValidationException>()
-                .WithMessage("O campo ValorDeEntrada, só aceita números entre (1 e 100).");
+                .WithMessage("O campo Entrada, só aceita números entre (1 e 100).");
         }
     }
 }

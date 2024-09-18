@@ -19,5 +19,12 @@ namespace Desafio.Decompor.Business.Validations
                 throw new EntityValidationException(
                     $"O campo {fieldName}, só aceita números entre (1 e 100).");
         }
+
+        public static void NotNullOuZero(object? target, string fieldName)
+        {
+            if (target is null || target.Equals(0))
+                throw new EntityValidationException(
+                    $"O campo {fieldName}, não pode ser zero ou nulo.");
+        }
     }
 }
