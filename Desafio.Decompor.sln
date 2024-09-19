@@ -19,6 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Decompor.Business",
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "desafio.decompor.client", "front-end\desafio.decompor.client\desafio.decompor.client.esproj", "{4E99A3CF-B71B-4146-BBE4-4334C7B12325}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "env", "env", "{CD9C5A7C-7631-4FCF-B430-B87F87DA7D81}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
