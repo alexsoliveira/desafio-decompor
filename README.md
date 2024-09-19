@@ -1,4 +1,4 @@
-# Desafio Sistema decompor
+# Desafio Sistema Decompor
 
 **Primeiro passo:** baixa o projeto na máquina e executa a linha de comando abaixo:<br>
 **git clone https://github.com/alexsoliveira/desafio-decompor.git**
