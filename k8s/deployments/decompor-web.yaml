@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: decompor-web-deployment
+  labels:
+    app: decompor-web
+spec:
+  selector:
+    matchLabels:
+      app: decompor-web  
+  template:
+    metadata:
+      labels:
+        app: decompor-web
+    spec:
+      containers:
+      - name: decompor-web
+        image: alexsoliveira/decompor-angular:1.0        
+        ports:
+        - containerPort: 4200
+        env: 
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Development
+          - name: ASPNETCORE_HTTP_PORTS
+            value: "5000"
+          - name: ASPNETCORE_HTTPS_PORTS
+            value: "5001"
+          - name: ASPNETCORE_URLS
+            value: http://*:5000

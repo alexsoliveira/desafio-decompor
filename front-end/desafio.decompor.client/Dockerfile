@@ -1,6 +1,9 @@
 FROM node:20 AS ng-builder
 WORKDIR /app
-COPY desafio.decompor.client /app
+# Para gerar imagem Docker Hub
+# COPY . /app  
+# Para gerar imagem para Docker-Compose
+COPY desafio.decompor.client /app 
 RUN npm install
 RUN npm install @angular/cli -g
 EXPOSE 4200

@@ -24,6 +24,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "env", "env", "{CD9C5A7C-763
 		docker-compose.yaml = docker-compose.yaml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{1D8A7522-26B0-4579-AEA7-18D1B6A1A66D}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

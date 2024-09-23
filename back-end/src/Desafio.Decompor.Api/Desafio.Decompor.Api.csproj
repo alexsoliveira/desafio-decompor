@@ -9,6 +9,7 @@
     <SpaRoot>..\desafio.decompor.client</SpaRoot>
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:4200</SpaProxyServerUrl>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,9 +23,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Desafio.Decompor.Business\Desafio.Decompor.Business.csproj" />
-    <ProjectReference Include="..\desafio.decompor.client\desafio.decompor.client.esproj">
+    <!--<ProjectReference Include="..\desafio.decompor.client\desafio.decompor.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
+    </ProjectReference>-->
   </ItemGroup>
 
 </Project>

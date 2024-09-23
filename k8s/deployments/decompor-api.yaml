@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: decompor-api-deployment
+  labels:
+    app: decompor-api
+spec:  
+  selector:
+    matchLabels:
+      app: decompor-api  
+  template:
+    metadata:
+      labels:
+        app: decompor-api
+    spec:
+      containers:
+      - name: decompor-api
+        image: alexsoliveira/decompor-api:1.1
+        ports:
+        - containerPort: 8080
