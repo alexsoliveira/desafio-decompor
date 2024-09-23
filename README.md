@@ -30,11 +30,11 @@ executar o comando abaixo:<br>
 **Obs.: o comando acima só funciona no promtp bash**
 
 **Oitavo passo:** rodar projeto no kubernetes, executa o comando abaixo:<br>
-**cd ..\..\..\k8s** <br>
-**Obs.: Caso esteja usando o kind, executa o comando primeiro. (kind create cluster --config=k8s/kind --name=decompor)**
-**kubectl apply -f .\deployments\decompor-api.yaml**
-**kubectl apply -f .\deployments\decompor-web.yaml**
-**kubectl apply -f .\services\decompor-api-svc.yaml**
+**cd ..\..\..\k8s** <br><br>
+**Obs.: Caso esteja usando o kind, executa o comando primeiro. (kind create cluster --config=k8s/kind --name=decompor)** <br><br>
+**kubectl apply -f .\deployments\decompor-api.yaml** <br>
+**kubectl apply -f .\deployments\decompor-web.yaml** <br>
+**kubectl apply -f .\services\decompor-api-svc.yaml** <br>
 **kubectl apply -f .\services\decompor-web-svc.yaml**
 
 
